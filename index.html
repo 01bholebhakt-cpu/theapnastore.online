@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheApnaStore.Online | Luxury Global Shopping</title>
+    <meta name="description" content="Experience premium global shopping for Fashion, Electronics, and Accessories. TheApnaStore.Online - Elegance delivered.">
+    <meta name="keywords" content="luxury e-commerce, global shopping, fashion, electronics, premium store">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sticky Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">THE<span>APNA</span>STORE</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#about">Our Story</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <i class="fas fa-search" id="search-btn"></i>
+                <i class="fas fa-moon" id="theme-toggle"></i>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span id="cart-count">0</span>
+                </div>
+                <i class="fas fa-bars" id="mobile-menu-btn"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="reveal">Elevate Your Lifestyle</h1>
+            <p class="reveal">Discover the finest curation of global luxury essentials.</p>
+            <div class="hero-btns reveal">
+                <a href="#shop" class="btn btn-primary">Shop Now</a>
+                <a href="#categories" class="btn btn-outline">Categories</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Curated Categories</h2>
+            <div class="category-grid">
+                <div class="cat-card" style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80')">
+                    <div class="cat-overlay"><h3>Fashion</h3></div>
+                </div>
+                <div class="cat-card" style="background-image: url('https://images.unsplash.com/photo-1491933382434-500287f9b54b?auto=format&fit=crop&w=800&q=80')">
+                    <div class="cat-overlay"><h3>Electronics</h3></div>
+                </div>
+                <div class="cat-card" style="background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80')">
+                    <div class="cat-overlay"><h3>Accessories</h3></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section class="shop" id="shop">
+        <div class="container">
+            <div class="shop-header">
+                <h2 class="section-title">Featured Collection</h2>
+                <div class="filters">
+                    <select id="sort-price">
+                        <option value="all">Sort By</option>
+                        <option value="low">Price: Low to High</option>
+                        <option value="high">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+            <div class="product-grid" id="product-list">
+                <!-- Products will be injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Join the Inner Circle</h2>
+            <p>Subscribe for exclusive access to new arrivals and private sales.</p>
+            <form class="subscribe-form">
+                <input type="email" placeholder="Your Email Address" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <h3>THEAPNASTORE</h3>
+                <p>Redefining modern luxury for the global citizen. Quality craftsmanship meets contemporary design.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TheApnaStore.Online. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Shopping Bag</h3>
+            <i class="fas fa-times" onclick="toggleCart()"></i>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Items injected by JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="total">Total: <span id="cart-total">$0.00</span></div>
+            <button class="btn btn-primary btn-block">Proceed to Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay-bg" id="cart-overlay-bg" onclick="toggleCart()"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
